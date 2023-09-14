@@ -46,7 +46,8 @@ Micro frontend is a software development architectural approach where a single a
 - `docker run -p 3000:1234 my-piral-app`
 
 ## To run using the docker compose file
-- `docker-compose up rm -d --build`
+- `docker-compose up -d --build`
+- `docker-compose down`
 ---
 ## Links
 - [Getting Started](https://docs.piral.io/guidelines/tutorials/02-getting-started)
