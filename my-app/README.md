@@ -38,7 +38,15 @@ Micro frontend is a software development architectural approach where a single a
 ## To publish pilet
 - `pilet publish --url https://feed.piral.cloud/api/v1/pilet/mx-demo --api-key <KEY>`
 
+---
+## To build a docker image
+- `docker build -t my-piral-app .`
 
+## To run the image
+- `docker run -p 3000:1234 my-piral-app`
+
+## To run using the docker compose file
+- `docker-compose up -d --build`
 ---
 ## Links
 - [Getting Started](https://docs.piral.io/guidelines/tutorials/02-getting-started)

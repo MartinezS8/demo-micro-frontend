@@ -8,7 +8,7 @@ const defaultTiles = (
   <>
     <div className="tile rows-2 cols-2">
       <div className="teaser">
-        <a href="https://piral.io/">Piral</a>
+        <a href="https://piral.io/">Piral App</a>
         <br />
         for next generation portals
       </div>
