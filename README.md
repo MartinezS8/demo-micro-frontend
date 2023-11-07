@@ -23,7 +23,7 @@ Micro frontend is a software development architectural approach where a single a
 ## Create a pilet
     pilet new ./my-app/dist/emulator/my-app-1.0.0.tgz --target my-pilet
 
-  >The first parameter ./my-app/dist/emulator/my-app-1.0.0.tgz specifies the application shell, which the pilet will be built for.
+  >The first parameter `./my-app/dist/emulator/my-app-1.0.0.tgz` specifies the __app shell__, which the pilet will be built for.
 
 ## Run pilet
     pilet debug

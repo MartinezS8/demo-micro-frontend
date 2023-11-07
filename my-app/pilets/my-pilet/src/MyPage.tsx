@@ -1,6 +1,16 @@
 import * as React from 'react';
 
-export default () => {
+export interface Post {
+  id: number;
+  title: string;
+  body: string;
+}
+
+export interface MyPageProps {
+  data: Array<Post>;
+}
+
+export const MyPage: React.FC<MyPageProps> = ({ data }) => {
   return (
     <>
       <h1>Title 123</h1>
@@ -17,6 +27,13 @@ export default () => {
         eligendi fugit officia earum distinctio. Mollitia blanditiis iusto cum pariatur quaerat fuga qui molestias
         delectus?
       </p>
+      <ul>
+        {
+          data.map(post => (
+            <li key={post.id}>{post.title}</li>
+          ))
+        }
+      </ul>
     </>
   );
 };

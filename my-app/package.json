@@ -6,13 +6,13 @@
     "piral"
   ],
   "dependencies": {
-    "piral": "1.2.0",
-    "piral-base": "1.2.0",
-    "piral-core": "1.2.0",
+    "piral": "^1.3.2",
+    "piral-base": "^1.3.2",
+    "piral-core": "^1.3.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-router": "^5",
-    "react-router-dom": "^5"
+    "react-router": "^6.18.0",
+    "react-router-dom": "^6.18.0"
   },
   "scripts": {
     "start": "piral debug",
@@ -30,13 +30,13 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "latest",
+    "@types/node": "^20.8.10",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-router": "^5",
     "@types/react-router-dom": "^5",
-    "piral-cli": "1.2.0",
-    "piral-cli-webpack5": "1.2.0",
+    "piral-cli": "^1.3.2",
+    "piral-cli-webpack5": "^1.3.2",
     "typescript": "latest"
   }
 }
