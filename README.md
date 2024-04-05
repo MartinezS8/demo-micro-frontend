@@ -39,10 +39,10 @@ Piral makes it easier to adopt a micro-frontend architecture, where different te
     piral new --target app-shell
 
 ## Run the Application Shell
-    npx piral debug
+    piral debug
 
 ## Create Package for the Application Shell
-    npx piral build
+    piral build
 
 >This will trigger the build of a Piral instance. By default, this command will create two folders within the `dist` folder: `emulator` and `release`. The latter contains the files for publishing the app shell to some host later on. The former contains an emulator package.
 
@@ -52,7 +52,37 @@ Piral makes it easier to adopt a micro-frontend architecture, where different te
 With the `pilet new` command, a new pilet with pre-defined content is created. The first parameter `./app-shell/dist/emulator/app-shell-1.0.0.tgz` specifies the application shell, which the pilet will be built for. Make sure that you adjust the path to the Piral instance located in your local directory structure.
 
 ## Start the Pilet
-    npx pilet debug
+    pilet debug
+
+## Build pilet
+    pilet build
+
+## Pack pilet
+    pilet pack
+
+## Do all of the three above pilet commands (build, pack, publish) just use `--fresh`
+    pilet publish --fresh --url sample
+
+## Publish pilet to piral cloud
+    pilet publish --fresh  --url https://feed.piral.cloud/api/v1/pilet/mx-demo --api-key <KEY>
+
+## Publish pilet to local feed instance
+    pilet publish --fresh  --url http://localhost:8181/api/v1/pilet --api-key df133a512569cbc85f69788d1b7ff5a909f6bcfe1c9a2794283a2fc35175882c
+
+---
+## Build a docker image
+    docker build -t my-piral-app .
+
+## Run the image
+    docker run -p 3000:1234 my-piral-app
+
+## Run using the docker compose file
+    docker-compose up -d --build
+
+## Stop running container
+    docker-compose down
 
 ## Links
 - [Piral: Getting Started](https://docs.piral.io/guidelines/tutorials/02-getting-started)
+- [Publishing Pilets](https://docs.piral.io/guidelines/tutorials/03-publishing-pilets)
+- [Error Codes](https://docs.piral.io/code/0000)
