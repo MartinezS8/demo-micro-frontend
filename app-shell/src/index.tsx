@@ -4,8 +4,7 @@ import { createInstance, Piral, createStandardApi } from 'piral';
 import { layout, errors } from './layout';
 
 // change to your feed URL here (either using feed.piral.cloud or your own service)
-// const feedUrl = 'https://feed.piral.cloud/api/v1/pilet/sample';
-const feedUrl = 'https://feed.piral.cloud/api/v1/pilet/mx-demo';
+const feedUrl = 'https://feed.piral.cloud/api/v1/pilet/empty';
 
 const instance = createInstance({
   state: {

@@ -1,17 +1,51 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { ComponentsState, ErrorComponentsState, Menu, Notifications, SwitchErrorInfo, MenuItemProps, DashboardContainerProps } from 'piral';
-import { DashboardContainer } from './DashboardContainer';
+import { ComponentsState, ErrorComponentsState, Menu, Notifications, SwitchErrorInfo, MenuItemProps } from 'piral';
 
 const MenuItem: React.FC<MenuItemProps> = ({ children }) => <li className="nav-item">{children}</li>;
 
+const defaultTiles = (
+  <>
+    <div className="tile rows-2 cols-2">
+      <div className="teaser">
+        <a href="https://piral.io/">Piral</a>
+        <br />
+        for next generation portals
+      </div>
+    </div>
+    <div className="tile rows-2 cols-2">
+      <div className="teaser">
+        <a href="https://www.typescriptlang.org/">TypeScript</a>
+        <br />
+        for writing scalable web apps
+      </div>
+    </div>
+    <div className="tile rows-2 cols-2">
+      <div className="teaser">
+        <a href="https://reactjs.org/">React</a>
+        <br />
+        for building components
+      </div>
+    </div>
+    <div className="tile rows-2 cols-2">
+      <div className="teaser">
+        <a href="http://getbootstrap.com/">Bootstrap</a>
+        <br />
+        for layout and styling
+      </div>
+    </div>
+    <div className="tile rows-2 cols-2">
+      <div className="teaser">
+        <a href="https://sass-lang.com">Sass</a>
+        <br />
+        for crafting custom styles
+      </div>
+    </div>
+  </>
+);
+
 const defaultMenuItems = (
   <>
-    <MenuItem type="general" meta={{}}>
-      <Link className="nav-link text-dark" to="/">
-        Home
-      </Link>
-    </MenuItem>
     <MenuItem type="general" meta={{}}>
       <Link className="nav-link text-dark" to="/not-found">
         Not Found
@@ -38,7 +72,16 @@ export const layout: Partial<ComponentsState> = {
       <SwitchErrorInfo {...props} />
     </div>
   ),
-  DashboardContainer: DashboardContainer,
+  DashboardContainer: ({ children }) => (
+    <div>
+      <h1>Hello, world!</h1>
+      <p>Welcome to your new microfrontend app shell, built with:</p>
+      <div className="tiles">
+        {defaultTiles}
+        {children}
+      </div>
+    </div>
+  ),
   DashboardTile: ({ columns, rows, children }) => <div className={`tile cols-${columns} rows-${rows}`}>{children}</div>,
   Layout: ({ children }) => (
     <div>
@@ -67,8 +110,8 @@ export const layout: Partial<ComponentsState> = {
               className={`collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse ${collapsed ? '' : 'show'}`}
               aria-expanded={!collapsed}>
               <ul className="navbar-nav flex-grow">
-                {defaultMenuItems}
                 {children}
+                {defaultMenuItems}
               </ul>
             </div>
           </div>
