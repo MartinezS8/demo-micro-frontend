@@ -1,0 +1,53 @@
+{
+  "name": "piral-shell",
+  "version": "1.0.0",
+  "description": "Piral shell host application for the Kulturplattform",
+  "keywords": [
+    "piral"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .ts,.tsx",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.6.1",
+    "piral": "^1.8.4",
+    "piral-ext": "^1.8.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^5",
+    "react-router-dom": "^5"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-links": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.24.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.5"
+  },
+  "app": "./index.html",
+  "types": "dist/index.d.ts",
+  "importmap": {
+    "imports": {},
+    "inherit": [
+      "piral",
+      "piral-core",
+      "piral-ext"
+    ]
+  }
+}
